@@ -1,0 +1,14 @@
+<div class = "mt-5 mx-3">
+    <div>
+        <h1>Gossip nº<%=@gossip_id%></h1>
+        <h5>Titre : <%=@gossips.find(@gossip_id).title%></h5>
+        <p>Contenu : <%=@gossips.find(@gossip_id).content%></p>
+        <p>Auteur : <%=@gossips.find(@gossip_id).user.first_name%> <%=@gossips.find(@gossip_id).user.last_name%></p>
+        <p>créé le : <%=@gossips.find(@gossip_id).created_at%> <%=@gossips.find(@gossip_id).user.last_name%></p>
+    </div>
+    <div>
+        <h5><%= link_to "A propos de l'auteur", user_path(@gossips.find(@gossip_id).user.first_name, @gossips.find(@gossip_id).user.last_name) %></h5>
+                  
+    </div>
+</div>
+
